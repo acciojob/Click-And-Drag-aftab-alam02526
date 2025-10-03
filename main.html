@@ -59,11 +59,18 @@ slider.addEventListener('mouseup', () => {
 
 slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
+
+
   e.preventDefault();
+
+
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2; // scroll speed multiplier
+
+
+  const walk = (x - startX) * 2; // speed factor
   slider.scrollLeft = scrollLeft - walk;
 });
+
 </script>
 
   </body>
